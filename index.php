@@ -256,10 +256,14 @@
                         <span>
                             Atenção: a informação acima foi enviada por um usuário anônimo.
                         </span>
+                        <?php $textLink = 'whatsapp://send?text=⚠' . substr($r['msg'], 0, 55) . '...' . "*Clique ABAIXO* para ver mais https://angrainforma.com";?>
+                        <a href="<?= $textLink;?>" target="_blank" class="report__container--box-share">
+                            <img src="./assets/images/send.svg" alt="">
+                            Compartilhe esta denúncia
+                        </a>
                     <?php
                     }
                     ?>
-                    
                 </div>
                 <form id="report" method="POST">
                     <input id="subject" type="text" name="subject" placeholder="Assunto" required>
