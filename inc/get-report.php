@@ -9,6 +9,4 @@ $insert = mysqli_query($connection, $query);
 while($row = mysqli_fetch_array($insert)){
     array_push($return, $row);
 }
-
-
 ?>

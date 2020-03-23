@@ -93,10 +93,14 @@
             color: $color--white;
             padding: 15px;
             display: block;
-        }
-        &:first-child {
             background: #25d366;
+            font-size: 2em;
+            font-weight: bold;
+            > i {
+                color: $color--white;
+            }
         }
+
     }
     &__title {
         @extend .headTitle;

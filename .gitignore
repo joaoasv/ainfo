@@ -1,6 +1,5 @@
 node_modules/
 package-lock.json
-package.json
 .sass-cache
 inc/db-sql.php
 inc/db.php

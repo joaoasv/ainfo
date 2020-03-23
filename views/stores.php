@@ -141,7 +141,7 @@
                     </div>
                     <div class="stores__call">
                         <div class="stores__details">
-                            <a href="tel:+5524<?= $store['tel']; ?>">WhatsApp</a>
+                            <a href="tel:+5524<?= $store['tel']; ?>"><i class="lni lni-whatsapp"></i> WhatsApp</a>
                         </div>
                     </div>
                 </li>

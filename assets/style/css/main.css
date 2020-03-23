@@ -8414,9 +8414,12 @@ form > textarea:focus {
   color: #fff;
   padding: 15px;
   display: block;
-}
-.stores__details:first-child {
   background: #25d366;
+  font-size: 2em;
+  font-weight: bold;
+}
+.stores__details > a > i {
+  color: #fff;
 }
 .stores__title--inner {
   line-height: auto;
@@ -8546,7 +8549,15 @@ form > textarea:focus {
     grid-template-columns: 100%;
   }
   .stores__filter {
-    padding: 10px;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-self: stretch;
+  }
+  .stores__filter > li > a {
+    font-size: 1.4em;
+    margin-right: -1px;
+    margin-top: -1px;
   }
   .stores__container--list {
     grid-template-columns: 100%;
