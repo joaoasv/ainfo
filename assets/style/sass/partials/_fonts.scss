@@ -1,0 +1,20 @@
+@import url("//use.typekit.net/ixh6vvy.css");
+
+$color--primary: #f70c5c;
+$color--one: #8ba2ad;
+$color--two: #98fb98;
+$color--tree: #1e2225;
+$color--four: #9CEAEF;
+$color--five: #205583;
+
+$color--text: #323232;
+$color--bottom: #e2e2e2;
+
+$color--button: green;
+$color--white: #fff;
+
+
+* {
+    color: $color--one;
+    font-family: 'Roboto', sans-serif;
+}

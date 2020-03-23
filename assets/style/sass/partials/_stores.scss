@@ -1,0 +1,21 @@
+.stores {
+    &__container {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        &--list {}
+        &--item {}
+    }
+    &__category {
+        &--food {
+            background: #fc0;
+        }
+    }
+    &__social {
+        &--links {}
+        &--icon {}
+    }
+
+    &__title {
+        @extend .headTitle;
+    }
+}

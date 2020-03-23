@@ -1,0 +1,133 @@
+
+@media only screen and (max-width: 820px) {
+    
+    .wrapper{
+        width: 300px;
+    }
+    .data{
+        padding: 0;
+        >.wrapper{
+            >.bg-dots{
+                right: 5px;
+            }
+        }
+        &__box{
+            display: block;
+            >div{
+                margin-bottom: 80px;
+                text-align: center;
+            }
+        }
+    }
+    .info{
+        padding: 80px 0;
+        &__list{
+            >ul{
+                display: block;
+                >li{
+                    margin-bottom: 30px;
+                    &:last-child{
+                        margin-bottom: 0;
+                    }
+                }
+            }
+        }
+    }
+
+    .news{
+        padding: 0;
+        >.wrapper{
+            .bg-dots-3,
+            .bg-dots-4
+            {
+                right: 5px;
+            }
+            .bg-dots-3{
+                top: -150px;
+            }
+            .bg-dots-4{
+                top: 550px;
+            }
+        }
+        &__content{
+            display: block;
+            >div{
+                margin-bottom: 40px;
+            }
+        }
+    }
+
+    .petition,
+    .report {
+        &__container {
+            grid-template-columns: 100%;
+            grid-gap: 0;
+        }
+    }
+
+
+    .report {
+        padding: 80px 0;
+    }
+
+    .petition {
+        &__result {
+            margin: 20px 0;
+            > ul {
+                > li {
+                    > h3 {
+                        font-size: 1em;
+                    }
+                    > span {
+                        font-size: 2rem;
+                    }
+                    > p {
+                        font-size: 1em;
+                    }
+                }
+            }
+        }
+    }
+    .radio {
+        &__group {
+            grid-template-columns: 100%;
+        }
+    }
+
+    .copyright{
+        >span{
+            >img{
+                width: 10%;
+            }
+        }
+    }
+
+    .push {
+        &__notification {
+            > h1 {
+                font-size: 1em;
+            }
+        }
+    }
+
+
+    .stores {
+        &__container {
+            grid-template-columns: 100%;
+            &--list {}
+            &--item {}
+        }
+        &__category {
+            &--food {}
+        }
+        &__social {
+            &--links {}
+            &--icon {}
+        }
+    
+        &__title {
+            // font-size: 7px;
+        }
+    }
+
+}

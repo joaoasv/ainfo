@@ -1,0 +1,45 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
+
+
+*{
+    color: $color--one;
+    font-family: 'proxima-nova', sans-serif;
+}
+
+body {
+    font-size: 62.5%;
+    background: #f4f4f4;
+    font-family: 'proxima-nova', sans-serif;
+    color: $color--text;
+    text-rendering: optimizeLegibility;
+    background: url('assets/images/gradiente.jpg') repeat-y;
+    background-size: 100%;
+}
+
+p{
+    font-size: 2em;
+}
+
+h1{
+    font-size: 5em;
+}
+
+h2{
+    font-size: 12em;
+    font-weight: 200;
+}
+
+h4{
+    font-size: 3em;
+    font-weight: 100;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+}
+
+h5{
+    font-size: 1em;
+    font-weight: 100;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: $color--primary;
+}
