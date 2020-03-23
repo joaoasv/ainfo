@@ -181,5 +181,3 @@ var icons = () => {
         console.log(data);
     });
 };
-
-icons();

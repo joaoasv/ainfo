@@ -1,21 +1,121 @@
 .stores {
-    &__container {
+
+    &__filter {
+        justify-self: end;
+        > li {
+            display: inline-block;
+            > a {
+                padding: 20px;
+                border: 1px solid $color--one;
+                font-size: 2em;
+                text-align: center;
+                display: block;
+                > i {
+                    margin-right: 10px;
+                }
+            }
+        }
+    }
+
+    &__group {
         display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        &--list {}
-        &--item {}
+        grid-template-columns: 30% 70%;
+        margin-bottom: 50px;
+    }
+
+    &__container {
+        &--list {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-gap: 50px;
+        }
+        &--item {
+            display: grid;
+            border: 1px solid $color--one;
+            text-align: center;
+            box-shadow: 0px 0px 14px 0px #62626280;
+        }
+        &--call {
+            background: palegreen;
+            border: 1px solid transparent;
+            > h4 {
+                color: $color--tree;
+                place-self: center;
+                margin: 0;
+                font-weight: bold;
+                text-align: center;
+                line-height: 22px;
+                letter-spacing: 1px;
+            }
+        }
     }
     &__category {
-        &--food {
-            background: #fc0;
+        padding: 5px 10px;
+        text-transform: uppercase;
+        font-weight: bold;
+        color: $color--white;
+        display: block;
+        letter-spacing: 1px;
+        justify-self: center;
+        align-self: center;
+        > i {
+            color: $color--white;
+        }
+        &--fast-food {
+            background: crimson;
+        }
+        &--medicamentos {
+            background: deepskyblue;
+        }
+        &--mercado {
+            background: goldenrod;
+        }
+        &--moda {
+            background: indigo;
+        }
+    }
+    &__inner {
+        padding: 30px;
+        display: grid;
+        grid-row-gap: 10px;
+    }
+    &__call {
+
+    }
+    &__tel {
+
+    }
+    &__details {
+        text-align: center;
+        line-height: inherit;
+        display: block;
+        > a {
+            color: $color--white;
+            padding: 15px;
+            display: block;
+        }
+        &:first-child {
+            background: #25d366;
+        }
+    }
+    &__title {
+        @extend .headTitle;
+        &--inner {
+            @extend .headTitle;
+            line-height: auto;
+            font-size: 2em;
+            margin: 20px 0;
+            font-weight: bold;
         }
     }
     &__social {
-        &--links {}
-        &--icon {}
-    }
-
-    &__title {
-        @extend .headTitle;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        &--links {
+            padding: 20px 10px;
+            font-size: 2em;
+            border: 1px solid $color--one;
+            margin-right: -1px;
+        }
     }
 }

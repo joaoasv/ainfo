@@ -1,20 +1,20 @@
 /* --------------------------------
 
-LineIconsPro Regular Web Font
-Author: lineicons.com
+LineIconsPro Light Web Font
+Learn more: lineicons.com
 
 -------------------------------- */
 @import "variables";
 @import "mixins";
 
 @font-face {
-  font-family: 'LineIconsPro Regular';
-  src: url('#{$lnir-font-path}/LineIconsPro Regular.eot');
-  src: url('#{$lnir-font-path}/LineIconsPro Regular.eot') format('embedded-opentype'),
-    url('#{$lnir-font-path}/LineIconsPro Regular.woff2') format('woff2'),
-    url('#{$lnir-font-path}/LineIconsPro Regular.woff') format('woff'),
-    url('#{$lnir-font-path}/LineIconsPro Regular.ttf') format('truetype'),
-    url('#{$lnir-font-path}/LineIconsPro Regular.svg') format('svg');
+  font-family: 'LineIconsPro Light';
+  src: url('#{$lnil-font-path}/LineIconsPro Light.eot');
+  src: url('#{$lnil-font-path}/LineIconsPro Light.eot') format('embedded-opentype'),
+    url('#{$lnil-font-path}/LineIconsPro Light.woff2') format('woff2'),
+    url('#{$lnil-font-path}/LineIconsPro Light.woff') format('woff'),
+    url('#{$lnil-font-path}/LineIconsPro Light.ttf') format('truetype'),
+    url('#{$lnil-font-path}/LineIconsPro Light.svg') format('svg');
   font-weight: normal;
   font-style: normal;
 }
@@ -23,9 +23,9 @@ Author: lineicons.com
 	base class definition
 -------------------------*/
 
-.lnir {
+.lnil {
   display: inline-block;
-  font: normal normal normal 1em/1 'LineIconsPro Regular';
+  font: normal normal normal 1em/1 'LineIconsPro Light';
   speak: none;
   text-transform: none;
   /* Better Font Rendering */
@@ -38,17 +38,17 @@ Author: lineicons.com
 -------------------------*/
 
 /* relative units */
-.lnir-sm {
+.lnil-sm {
   font-size: 0.8em;
 }
-.lnir-lg {
+.lnil-lg {
   font-size: 1.2em;
 }
 /* absolute units */
-.lnir-16 {
+.lnil-16 {
   font-size: 16px;
 }
-.lnir-32 {
+.lnil-32 {
   font-size: 32px;
 }
 
@@ -56,13 +56,13 @@ Author: lineicons.com
   add a square/circle background
 -----------------------------------*/
 
-.lnir-bg-square,
-.lnir-bg-circle {
+.lnil-bg-square,
+.lnil-bg-circle {
   padding: 0.35em;
-  background-color: $lnir-background-color;
+  background-color: $lnil-background-color;
 }
 
-.lnir-bg-circle {
+.lnil-bg-circle {
   border-radius: 50%;
 }
 
@@ -70,7 +70,7 @@ Author: lineicons.com
   use icons as list item markers
 -------------------------------------*/
 
-.lnir-ul {
+.lnil-ul {
   padding-left: 0;
   list-style-type: none;
 
@@ -80,8 +80,8 @@ Author: lineicons.com
     line-height: 1.4;
   }
 
-  > li > .lnir {
-    margin-right: $lnir-li-margin-right;
+  > li > .lnil {
+    margin-right: $lnil-li-margin-right;
     line-height: inherit;
   }
 }
@@ -90,13 +90,13 @@ Author: lineicons.com
   spinning icons
 -------------------------*/
 
-.lnir-is-spinning {
-  -webkit-animation: lnir-spin 2s infinite linear;
-  -moz-animation: lnir-spin 2s infinite linear;
-  animation: lnir-spin 2s infinite linear;
+.lnil-is-spinning {
+  -webkit-animation: lnil-spin 2s infinite linear;
+  -moz-animation: lnil-spin 2s infinite linear;
+  animation: lnil-spin 2s infinite linear;
 }
 
-@-webkit-keyframes lnir-spin {
+@-webkit-keyframes lnil-spin {
   0% {
     -webkit-transform: rotate(0deg);
   }
@@ -104,7 +104,7 @@ Author: lineicons.com
     -webkit-transform: rotate(360deg);
   }
 }
-@-moz-keyframes lnir-spin {
+@-moz-keyframes lnil-spin {
   0% {
     -moz-transform: rotate(0deg);
   }
@@ -112,7 +112,7 @@ Author: lineicons.com
     -moz-transform: rotate(360deg);
   }
 }
-@keyframes lnir-spin {
+@keyframes lnil-spin {
   0% {
     -webkit-transform: rotate(0deg);
     -moz-transform: rotate(0deg);
@@ -133,23 +133,23 @@ Author: lineicons.com
   rotated/flipped icons
 -------------------------*/
 
-.lnir-rotate-90  {
-	@include lnir-rotate(90deg, 1);
+.lnil-rotate-90  {
+	@include lnil-rotate(90deg, 1);
 }
 
-.lnir-rotate-180 {
-	@include lnir-rotate(180deg, 2);
+.lnil-rotate-180 {
+	@include lnil-rotate(180deg, 2);
 }
 
-.lnir-rotate-270 {
-	@include lnir-rotate(270deg, 3);
+.lnil-rotate-270 {
+	@include lnil-rotate(270deg, 3);
 }
 
-.lnir-flip-y {
-	@include lnir-flip(-1, 1, 0);
+.lnil-flip-y {
+	@include lnil-flip(-1, 1, 0);
 }
-.lnir-flip-x {
-	@include lnir-flip(1, -1, 2);
+.lnil-flip-x {
+	@include lnil-flip(1, -1, 2);
 }
 
 @import "icons";

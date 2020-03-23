@@ -1,14 +1,15 @@
 @import "partials/reset";
 @import "partials/fonts";
 // Lineicons PRO
-@import "components/mixins";
+@import "components/lineicons";
 @import "components/variables";
 @import "components/icons";
-@import "components/lineicons";
+@import "components/mixins";
 // 
 @import "partials/grid";
 @import "partials/general";
 @import "partials/layout";
+@import "partials/menu";
 @import "partials/stores";
 @import "partials/mobile";
 

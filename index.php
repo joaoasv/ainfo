@@ -2,7 +2,7 @@
 <!doctype html>
 <html lang="pt-br">
 <head>
-<meta charset="utf-8">
+<meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="main.css?v=<?php echo rand();  ?>"> 
     <title>Angra Informa</title>
@@ -25,11 +25,24 @@
 <body>
     <section class="push__notification" id="push">
         <a href="#" class="push__close" id="push__close"><i class='lni lni-close'></i></a>
-        <h1><?= $push['news']; ?></h1>
+        <h1></i><?= $push['news']; ?></h1>
     </section>
+
     <section class="header">
         <h1><a href="./index.php"><img src="./assets/images/logo-angra.svg" alt=""></a></h1>
     </section>
+
+    <nav class="navigation">
+        <div class="wrapper">
+            <ul class="navigation__menu">
+                <li class="navigation__menu--item"><a class="navigation__menu--link" href="./">Página Inicial</a></li>
+                <li class="navigation__menu--item"><a class="navigation__menu--link" href="./">Denúncia Anônima</a></li>
+                <li class="navigation__menu--item"><a class="navigation__menu--link" href="./">Compre do Pequeno</a></li>
+                <li class="navigation__menu--item"><a class="navigation__menu--link" href="./">Petição</a></li>
+            </ul>
+        </div>
+    </nav>
+
     <section class="data">
         <div class="wrapper">
             <div class="bg-dots">
@@ -38,7 +51,7 @@
             <div class="headTitle">
                     <span class="dot"></span>
                     <span>Últimas</span>
-                    <h4>Atualizações <small><?= $date['update']; ?></small></h4>
+                    <h4>Atualizações <small>[ <?= $date['update']; ?> ]</small></h4>
             </div>
             <div class="data__box">
                 <div>
@@ -179,6 +192,8 @@
         </div>
     </section>
 
+    <?php include './views/stores.php'; ?>
+    
     <section class="news">
         <div class="wrapper">
             <div class="headTitle">
@@ -210,7 +225,7 @@
         </div>
     </section>
 
-    <?php include './views/stores.php'; ?>
+    
     
     <div id="notification"></div>
 
@@ -239,7 +254,7 @@
                             <?= $r['msg']; ?>
                         </div>
                         <span>
-                            Atenção: a informação acima foi enviada por um usuário anônimo. não garantimos sua procedência.
+                            Atenção: a informação acima foi enviada por um usuário anônimo.
                         </span>
                     <?php
                     }
@@ -272,17 +287,17 @@
                         <ul>
                             <li>
                                 <h3>A favor//</h3>
-                                <span>#<?= $totalAccept; ?></span>
+                                <span class="red-light">#<?= $totalAccept; ?></span>
                                 <p>votos</p>
                             </li>
                             <li>
                                 <h3>Contra//</h3>
-                                <span>#<?= $totalDeclined; ?></span>
+                                <span class="red-light">#<?= $totalDeclined; ?></span>
                                 <p>votos</p>
                             </li>
                             <li>
                                 <h3>Total//</h3>
-                                <span>#<?= $total; ?></span>
+                                <span class="red-light">#<?= $total; ?></span>
                                 <p>votos</p>
                             </li>
                         </ul>

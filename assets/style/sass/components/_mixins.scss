@@ -1,4 +1,4 @@
-@mixin lnir-rotate($degrees, $rotation) {
+@mixin lnil-rotate($degrees, $rotation) {
   filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=#{$rotation});
   -webkit-transform: rotate($degrees);
   -moz-transform: rotate($degrees);
@@ -7,7 +7,7 @@
   transform: rotate($degrees);
 }
 
-@mixin lnir-flip($horiz, $vert, $rotation) {
+@mixin lnil-flip($horiz, $vert, $rotation) {
   filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=#{$rotation});
   -webkit-transform: scale($horiz, $vert);
   -moz-transform: scale($horiz, $vert);

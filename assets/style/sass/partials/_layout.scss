@@ -40,6 +40,9 @@
 
 .red-light{
     color: $color--primary;
+    font-family: atrament-web, sans-serif;
+    font-weight: 400;
+    font-style: normal;
 }
 
 .header{
@@ -49,6 +52,7 @@
     font-size: 2em;
     >h1{
         color: #fff;
+        line-height: 0;
         >a{
             margin: 0 auto;
             display: block;
@@ -99,6 +103,7 @@
     &__box{
         display: grid;
         grid-template-columns: repeat(4, 1fr);
+        text-align: center;
         >div{
             >span{
                 text-transform: uppercase;
@@ -111,14 +116,16 @@
             >p{
                 margin-top: -15px;
                 text-transform: uppercase;
-                font-size: 4em;
+                font-size: 2em;
+                font-weight: bold;
+                letter-spacing: 3px;
             }
         }
     }
 }
 
 .info{
-    padding: 150px 0;
+    padding: 100px 0;
     >.wrapper{
         position: relative;
         >.bg-corona{
@@ -433,7 +440,7 @@ input[type="submit"]:disabled {
 
 
 form{
-    align-self: center;
+    align-self: start;
     & input[type="radio"] {
         position: absolute;
         visibility: hidden;
