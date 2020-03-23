@@ -439,7 +439,8 @@ input[type="submit"]:disabled {
 }
 
 
-form{
+form {
+
     align-self: start;
     & input[type="radio"] {
         position: absolute;

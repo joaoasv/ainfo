@@ -26,7 +26,6 @@ $('#report').on('keydown', function(e) {
 });
 
 
-
 $("#sub-send").on('click', function(e) {
 
     const subject = $('#subject').val();
@@ -49,7 +48,7 @@ $("#sub-send").on('click', function(e) {
             },
             beforeSend: function() {
                 $('#notification').css('display', 'grid');
-                $("#notification").html("<div><img src='./assets/images/loading2.svg'><h2>Enviando sua denúncia...</h2></div>");
+                $("#notification").html("<div><img src='./public/assets/images/loading2.svg'><h2>Enviando sua denúncia...</h2></div>");
             },
             success: function(data) {
                 setTimeout(function() {
@@ -95,7 +94,7 @@ $("#petition-send").on('click', function(e) {
             },
             beforeSend: function() {
                 $('#notification').css('display', 'grid');
-                $("#notification").html("<div><img src='./assets/images/loading2.svg'><h2>Seu voto está sendo computado...</h2></div>");
+                $("#notification").html("<div><img src='./public/assets/images/loading2.svg'><h2>Seu voto está sendo computado...</h2></div>");
             },
             success: function(data) {
                 setTimeout(function() {
@@ -126,10 +125,11 @@ $("#petition-send").on('click', function(e) {
             },
             beforeSend: function() {
                 $('#notification').css('display', 'grid');
-                $("#notification").html("<div><img src='./assets/images/loading2.svg'><h2>Validando CPF...</h2></div>");
+                $("#notification").html("<div><img src='./public/assets/images/loading2.svg'><h2>Validando CPF...</h2></div>");
             },
             success: function(data) {
                 var res = JSON.parse(data);
+                
                 if(res.check && res.cpf) {
                     return sendReport();
                 }
@@ -167,17 +167,11 @@ var push = () => {
     const push = $('#push');
     const close = $('#push__close');
 
-    close.on('click', function() {
+    close.on('click', function(e) {
+        e.preventDefault();
         push.slideToggle();
     });
 
 };
 
 push();
-
-
-var icons = () => {
-    $.get('./assets/js/icons.json', function(data) {
-        console.log(data);
-    });
-};

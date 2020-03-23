@@ -31,6 +31,7 @@ module.exports = function (grunt) {
                 expand: true,
                 cwd: 'assets/style/css',
                 src: ['*.css', '!*.min.css'],
+                dest: 'public/assets/css',
                 ext: '.css'
             }
         },
@@ -38,7 +39,7 @@ module.exports = function (grunt) {
         browserSync: {
             dev: {
                 bsFiles: {
-                    src: ['./*.html', './assets/js/*.js', './assets/images/**/*.{png,jpg,jpeg,gif,webp,svg}']
+                    src: ['./*.php', './public/assets/js/*.js', , './public/assets/css/*.css', './public/assets/images/**/*.{png,jpg,jpeg,gif,webp,svg}']
                 },
                 options: {
                     proxy: "http://localhost/ainfo/",
