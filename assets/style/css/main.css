@@ -11,7 +11,7 @@
 
 * {
   color: #8ba2ad;
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
 }
 
 /* --------------------------------
@@ -21,7 +21,7 @@ Learn more: lineicons.com
 
 -------------------------------- */
 @font-face {
-  font-family: 'LineIconsPro Light';
+  font-family: "LineIconsPro Light";
   src: url("./assets/fonts/LineIconsPro Light.eot");
   src: url("./assets/fonts/LineIconsPro Light.eot") format("embedded-opentype"), url("./assets/fonts/LineIconsPro Light.woff2") format("woff2"), url("./assets/fonts/LineIconsPro Light.woff") format("woff"), url("./assets/fonts/LineIconsPro Light.ttf") format("truetype"), url("./assets/fonts/LineIconsPro Light.svg") format("svg");
   font-weight: normal;
@@ -32,7 +32,7 @@ Learn more: lineicons.com
 -------------------------*/
 .lnil {
   display: inline-block;
-  font: normal normal normal 1em/1 'LineIconsPro Light';
+  font: normal normal normal 1em/1 "LineIconsPro Light";
   speak: none;
   text-transform: none;
   /* Better Font Rendering */
@@ -7801,13 +7801,13 @@ Learn more: lineicons.com
 
 * {
   color: #8ba2ad;
-  font-family: 'proxima-nova', sans-serif;
+  font-family: "proxima-nova", sans-serif;
 }
 
 body {
   font-size: 62.5%;
   background: #f4f4f4;
-  font-family: 'proxima-nova', sans-serif;
+  font-family: "proxima-nova", sans-serif;
   color: #323232;
   text-rendering: optimizeLegibility;
   background: url("assets/images/gradiente.jpg") repeat-y;
@@ -7907,22 +7907,22 @@ h5 {
   width: 100%;
 }
 
-.headTitle, .stores__title, .stores__title--inner {
+.headTitle, .stores__title--inner, .stores__title {
   margin-bottom: 45px;
   display: inline-block;
 }
-.headTitle > span, .stores__title > span, .stores__title--inner > span {
+.headTitle > span, .stores__title--inner > span, .stores__title > span {
   display: inline-block;
   font-size: 1.1em;
   text-transform: uppercase;
   letter-spacing: 2px;
 }
-.headTitle > h4, .stores__title > h4, .stores__title--inner > h4 {
+.headTitle > h4, .stores__title--inner > h4, .stores__title > h4 {
   margin-left: 13px;
 }
-.headTitle > h4 > small, .stores__title > h4 > small, .stores__title--inner > h4 > small {
+.headTitle > h4 > small, .stores__title--inner > h4 > small, .stores__title > h4 > small {
   color: #98fb98;
-  font-size: .5em;
+  font-size: 0.5em;
   text-transform: uppercase;
   letter-spacing: 3px;
   font-weight: 400;
@@ -7974,7 +7974,7 @@ h5 {
   right: 0;
   width: 350px;
   height: auto;
-  opacity: .25;
+  opacity: 0.25;
 }
 .info__list > ul {
   display: grid;
@@ -8068,7 +8068,7 @@ h5 {
   border: 1px solid rgba(255, 255, 255, 0.2);
 }
 #notification > div > h2 {
-  font-size: .6em;
+  font-size: 0.6em;
   text-transform: uppercase;
   letter-spacing: 2px;
   margin-top: 20px;
@@ -8120,10 +8120,23 @@ h5 {
 .report__container--box > span {
   display: block;
   color: #f70c5c;
-  margin-bottom: 35px;
 }
 .report__container--box-title {
   text-transform: uppercase;
+}
+.report__container--box-share {
+  margin-top: 10px;
+  font-size: 1.35em;
+  margin-bottom: 35px;
+  display: inline-block;
+  border: 1px solid #8ba2ada6;
+  padding: 7px 15px;
+  letter-spacing: 0.65px;
+}
+.report__container--box-share > img {
+  width: 15px;
+  margin-right: 5px;
+  color: #fff;
 }
 
 .petition__container {
@@ -8180,13 +8193,13 @@ h5 {
   top: 15px;
   left: 0;
   z-index: 5;
-  transition: border .25s linear;
-  -webkit-transition: border .25s linear;
+  transition: border 0.25s linear;
+  -webkit-transition: border 0.25s linear;
 }
 .radio__check:before {
   display: block;
   position: absolute;
-  content: '';
+  content: "";
   border-radius: 100%;
   height: 15px;
   width: 15px;
@@ -8223,14 +8236,14 @@ input[type=radio]:checked ~ label {
 
 .input__error {
   color: #f70c5c !important;
-  transition: .2s;
+  transition: 0.2s;
   border: 1px solid #f70c5c !important;
 }
 
-input[type="submit"]:disabled {
-  opacity: .3;
+input[type=submit]:disabled {
+  opacity: 0.3;
 }
-input[type="submit"]:disabled:hover {
+input[type=submit]:disabled:hover {
   background: #f70c5c !important;
 }
 
@@ -8246,7 +8259,7 @@ input[type="submit"]:disabled:hover {
   font-size: 1em;
 }
 .copyright > span:last-child {
-  font-size: .8em;
+  font-size: 0.8em;
 }
 .copyright > span > a > img {
   width: 5%;
@@ -8255,7 +8268,7 @@ input[type="submit"]:disabled:hover {
 form {
   align-self: start;
 }
-form input[type="radio"] {
+form input[type=radio] {
   position: absolute;
   visibility: hidden;
 }
@@ -8280,7 +8293,7 @@ form > input:last-child {
   letter-spacing: 2px;
   text-transform: uppercase;
   color: #fff;
-  transition: all .2s;
+  transition: all 0.2s;
   -webkit-appearance: none;
 }
 form > input:last-child:hover {
@@ -8320,10 +8333,10 @@ form > textarea:focus {
   content: "//";
   display: inline-block;
   margin-right: 5px;
-  transition: .2s;
+  transition: 0.2s;
 }
 .navigation__menu--link:hover {
-  transition: .2s;
+  transition: 0.2s;
   color: #fff;
 }
 .navigation__menu--link:hover:after {
@@ -8491,7 +8504,7 @@ form > textarea:focus {
     padding: 0;
   }
   .news > .wrapper .bg-dots-3,
-  .news > .wrapper .bg-dots-4 {
+.news > .wrapper .bg-dots-4 {
     right: 5px;
   }
   .news > .wrapper .bg-dots-3 {
@@ -8508,7 +8521,7 @@ form > textarea:focus {
   }
 
   .petition__container,
-  .report__container {
+.report__container {
     grid-template-columns: 100%;
     grid-gap: 0;
   }
