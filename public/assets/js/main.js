@@ -1,9 +1,12 @@
-$(window).scroll(function(){
+
+
+$(window).scroll(function () {
     var g = $(window).scrollTop();
     var wapp = $('.data').offset().top;
-    if(g >= (wapp - 150)){
+    if (g >= (wapp - 150)) {
         $('.wapp').fadeIn();
-    }else{
+    } else {
         $('.wapp').fadeOut();
     }
 })
+

@@ -1,6 +1,3 @@
-<?php 
-    include "./views/header.php"; 
-?>
     <section class="push__notification" id="push">
         <a href="#" class="push__close" id="push__close"><i class='lni lni-close'></i></a>
         <h1></i><?= $push['news']; ?></h1>
@@ -15,9 +12,9 @@
             <ul class="navigation__menu">
                 <li class="navigation__menu--item"><a class="navigation__menu--link" href="./">Página Inicial</a></li>
                 <li class="navigation__menu--item"><a class="navigation__menu--link" href="./">Denúncia Anônima</a></li>
-                <li class="navigation__menu--item"><a class="navigation__menu--link" href="./">Compre do Pequeno</a></li>
+                <li class="navigation__menu--item"><a class="navigation__menu--link" href="./#stores">Compre do Pequeno</a></li>
                 <li class="navigation__menu--item"><a class="navigation__menu--link" href="./sintomas">Tenho os sintomas</a></li>
-                <li class="navigation__menu--item"><a class="navigation__menu--link" href="./">Petição</a></li>
+                <li class="navigation__menu--item"><a class="navigation__menu--link" href="./#petition">Petição</a></li>
             </ul>
         </div>
     </nav>
@@ -171,7 +168,7 @@
         </div>
     </section>
 
-    <?php include './views/pages/stores.php'; ?>
+    <?php include './views/includes/stores.php'; ?>
     
     <section class="news">
         <div class="wrapper">
@@ -310,5 +307,3 @@
         
         </div>
     </section>
-    
-<?php require './views/footer.php'; ?>

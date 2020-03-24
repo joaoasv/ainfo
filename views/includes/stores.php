@@ -1,5 +1,4 @@
 <?php 
-    require './inc/functions.php';
     $stores = [
         '1' => [
             'name' => 'Black Wood Burguer',
@@ -79,7 +78,7 @@
     <div class="wrapper">
         
         <div class="stores__group">
-            <div class="stores__title">
+            <div class="stores__title" id="#stores">
                 <span class="dot"></span>
                 <span>Empresas locais</span>
                 <h4>Delivery</h4>
@@ -125,7 +124,7 @@
                             <i class="lnil <?= $iconClass; ?>"></i> <?= $store['category']; ?>
                         </span>
 
-                        <h4 class="stores__title--inner"><?= $store['name']; ?></h4>
+                        <h4 class="stores__title--inner"><a href="./store/?p=<?= $slug; ?>"><?= $store['name']; ?></a></h4>
                                 
                         <div class="stores__social">
                             <a href="./" class="stores__social--links">

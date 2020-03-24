@@ -1,0 +1,1 @@
+<h1>single das lojas com parametro por url</h1>

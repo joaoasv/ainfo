@@ -1,0 +1,1 @@
+<h1>listagem geral das lojas</h1>
