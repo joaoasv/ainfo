@@ -273,9 +273,6 @@
 
 .report{
     padding: 120px 0;
-    >.wrapper{
-        
-    }
     &__container{
         display: grid;
         grid-template-columns: repeat(2, 1fr);
@@ -288,10 +285,23 @@
             >span{
                 display: block;
                 color: $color--primary;
-                margin-bottom: 35px;
             }
             &-title{
                 text-transform: uppercase;
+            }
+            &-share{
+                margin-top: 10px;
+                font-size: 1.35em;
+                margin-bottom: 35px;
+                display: inline-block;
+                border:1px solid #8ba2ada6;
+                padding:7px 15px;
+                letter-spacing: .65px;
+                >img{
+                    width: 15px;
+                    margin-right: 5px;
+                    color: #fff;
+                }
             }
         }
     }
@@ -384,7 +394,7 @@
         font-size: 1.2em;
         z-index: 9;
         cursor: pointer;
-        -webkit-transition: all 0.25s linear;
+        transition: all 0.25s linear;
         padding: 20px 30px 20px 40px;
     }
 }
