@@ -129,7 +129,7 @@ $("#petition-send").on('click', function(e) {
             },
             success: function(data) {
                 var res = JSON.parse(data);
-                
+
                 if(res.check && res.cpf) {
                     return sendReport();
                 }
@@ -163,7 +163,110 @@ $("#petition-send").on('click', function(e) {
     }
 });
 
-var push = () => {
+$("#login").on('click', function(e){
+    const l_name = $('#login-name').val();  
+    const l_pass = $('#login-pass').val(); 
+    e.preventDefault();
+    validateLogin();
+    function validateLogin(){
+        $.ajax({
+            url: "./inc/validate-login.php",
+            type: "POST",
+            async: true,
+            data: {
+                name: l_name,
+                pass: l_pass,
+            },
+            beforeSend: function() {
+                $('#notification').css('display', 'grid');
+                $("#notification").html("<div><img src='./public/assets/images/loading2.svg'><h2>Conectando...</h2></div>");
+               
+            },
+            success: function(data) {
+                var res = JSON.parse(data);
+                if(res.login){
+                    // console.log(res);
+                    setTimeout(function() {
+                        $("#notification").html("<div><i class='lni lni-checkmark-circle'></i><h2>Conectado!</h2></div>");
+                        setTimeout(function() {
+                            $("#notification").fadeOut();
+                            window.location.href = 'http://localhost:3000/ainfo/admin/';
+                            // location.reload(true);
+                        }, 2200);
+                    }, 2000);
+                }else{
+                    errorLogin();
+                }
+
+
+            },
+            error: function(data) {
+                $("#notification").html("Deu ruim");
+            }
+        });
+    }
+
+    function errorLogin(){
+        $('#notification').css('display', 'grid');
+        $("#notification").html("<div class='error'><i class='lni lni-close'></i><h2>Senha ou usuário inválido =(</h2></div>");
+        setTimeout(function() {
+            $("#notification").fadeOut();
+            $('#login-name').val('');  
+            $('#login-pass').val(''); 
+        }, 2200);
+    }
+
+});
+
+
+function createBusinessPage(user, business = '' , products = '', about = '', phone = '', map = ''){
+    $.ajax({
+        url: "./controller/create-business.php",
+        type: "POST",
+        async: true,
+        data: {
+            user: user,
+            business: business,
+            products: products,
+            about: about,
+            phone: phone,
+            map: map
+        },
+        beforeSend: function() {
+            $('#notification').css('display', 'grid');
+            $("#notification").html("<div><img src='./public/assets/images/loading2.svg'><h2>Criando páginas...</h2></div>");
+        },
+        success: function(data) {
+            window.location.href = 'http://localhost:3000/ainfo/lojas.php?page=' +  business;            
+        },
+        error: function() {
+            $("#notification").html("Deu ruim");
+        }
+    })
+}
+
+
+function sendImage(data){
+    $.ajax({
+        url:"./controller/send-image.php",
+        method: "POST",
+        data: data,
+        contentType: false,
+        cache: false,
+        processData: false,
+        beforeSend:()=>{
+            $('#uploaded_image').html("<label>Enviando imagem...</label>");
+        },
+        success:(data)=>{
+            $('#uploaded_image').html(data);
+        }
+
+    })
+}
+
+
+
+var push = () => { // Notificação no header
     const push = $('#push');
     const close = $('#push__close');
 
@@ -175,3 +278,4 @@ var push = () => {
 };
 
 push();
+

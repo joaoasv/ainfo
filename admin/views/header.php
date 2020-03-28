@@ -1,22 +1,12 @@
 <?php 
-    require_once "./config/db.php";
-
-    include "./config/config.php"; // Caminhos
-    include "./inc/functions.php";
-
-    include "./views/data.php"; //  Informações atualizadas manualmente
-
-    include "./inc/get-petition.php"; 
-    include "./inc/get-report.php";
-
-
+    //include "./config/config.php"; // Caminhos
 ?>
 <!doctype html>
 <html lang="pt-br">
 <head>
 <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="<?= stylesheet_url; ?>"> 
+    <link rel="stylesheet" type="text/css" href="../public/assets/css/main.css"> 
     <title>Angra Informa</title>
     <link rel="stylesheet" href="https://cdn.lineicons.com/2.0/LineIcons.css">
     <meta property="og:title" content="Angra Informa • Coronavirus">
